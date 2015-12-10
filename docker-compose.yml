@@ -1,0 +1,20 @@
+# a fake data source which
+
+fake-source:
+    build: fake-source 
+
+zookeeper:
+    image: jplock/zookeeper:3.4.6
+
+kafka:
+    image: ches/kafka:0.8.2.1
+    links:
+        - zookeeper:zookeeper
+
+producer:
+    build: producer
+    links:
+        - kafka:kafka
+        - fake-source:source
+
+# vim: set ts=4 sw=4 expandtab:

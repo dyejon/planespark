@@ -1,0 +1,3 @@
+deb http://mirrors.xmission.com/debian jessie main
+deb http://mirrors.xmission.com/debian jessie-updates main
+deb http://security.debian.org jessie/updates main
