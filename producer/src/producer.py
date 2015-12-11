@@ -68,7 +68,7 @@ def serializer(callback):
         try:
             rec = yield
             cols = rec.split(',')
-                callback(tbuffer.getvalue())
+            callback(tbuffer.getvalue())
         except:
             log.exception('failure serializing record "%s"' % rec)
         finally:
