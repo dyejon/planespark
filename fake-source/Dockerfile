@@ -1,10 +1,12 @@
 FROM debian:8
 
 RUN apt-get update && \ 
-    apt-get install -y netcat && \
+    apt-get install -y python net-tools && \
     apt-get autoclean && \
     apt-get clean
 
-ADD start.sh /
+ADD source.py /
 
-CMD /start.sh
+EXPOSE 30003
+
+CMD /source.py

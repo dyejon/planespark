@@ -18,6 +18,6 @@ WORKDIR /src
 
 RUN thrift --gen py sbs_messages.thrift
 
-CMD sleep 3600
+CMD ./producer.py
 
 # vim: set ts=4 sw=4 expandtab:
